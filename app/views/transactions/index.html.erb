@@ -1,0 +1,31 @@
+<h1>Transactions</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>User</th>
+      <th>Parent</th>
+      <th>Customer email</th>
+      <th>Customer phone</th>
+      <th>Status</th>
+      <th> Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction.amount %></td>
+        <td><%= transaction.user_id %></td>
+        <td><%= transaction.parent_id %></td>
+        <td><%= transaction.customer_email %></td>
+        <td><%= transaction.customer_phone %></td>
+        <td><%= transaction.status %></td>
+        <td><%= link_to 'Show', transaction_path(transaction) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

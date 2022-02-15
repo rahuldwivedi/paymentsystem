@@ -1,0 +1,35 @@
+<div class="container">
+  <p>
+    <strong>Amount:</strong>
+    <%= @transaction.amount %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= @transaction.user_id %>
+  </p>
+
+  <% if @transaction.parent_id %>
+    <p>
+      <strong>Parent:</strong>
+       <%= link_to @transaction.parent_id, transaction_path(@transaction.parent_id) %>
+    </p>
+  <% end %>
+
+  <p>
+    <strong>Customer email:</strong>
+    <%= @transaction.customer_email %>
+  </p>
+
+  <p>
+    <strong>Customer phone:</strong>
+    <%= @transaction.customer_phone %>
+  </p>
+
+  <p>
+    <strong>Status:</strong>
+    <%= @transaction.status %>
+  </p>
+</div>
+
+<%= link_to 'Back', transactions_path, class: 'btn btn-info' %>

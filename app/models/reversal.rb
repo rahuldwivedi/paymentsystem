@@ -1,0 +1,2 @@
+class Reversal < Transaction
+end

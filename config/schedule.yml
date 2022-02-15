@@ -1,0 +1,4 @@
+new_lead_worker:
+  cron: "0 * * * *"
+  class: "OldTransactionDeleter"
+  queue: default
